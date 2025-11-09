@@ -28,7 +28,7 @@ t1, t2 = 4, 17
 # t1, t2 = 5, 21
 # t1, t2 = 9, 42
 
-tt = t1+t2    # Test time (seconds)
+tt = t1+t2    # Reliability time (seconds)
 
 """Cooling load on MT cabinets"""
 load_pwm = 60e3
