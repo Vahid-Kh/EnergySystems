@@ -1,0 +1,195 @@
+
+# TO MAKE SURE LATEST UPDATED FROM GITHUB
+
+# Show current branch
+echo "Current branch:"
+git branch
+# Fetch all remote changes and tags
+echo "Fetching all remotes and tags..."
+git fetch --all --tags
+# Pull latest changes (merge)
+echo "Pulling latest changes with merge..."
+git pull
+# Alternatively, pull with rebase for cleaner history
+# Uncomment the next line if you prefer rebase
+# echo "Pulling latest changes with rebase..."
+# git pull --rebase
+echo "Update complete."
+
+# TO PUSH MY LATEST WORK ONLINE
+
+# Optional: check current branch
+git branch
+# Optional: switch to main if you're not already on it
+git checkout main
+# Stage all changes
+git add .
+# Commit with a message
+git commit -m "Latest development updates"
+# Pull latest remote changes to avoid conflicts
+git pull origin main --rebase
+# Push your changes to the remote main branch
+git push origin main
+git checkout main
+git merge <your-feature-branch>
+git push origin main
+
+
+## 🧰 Most Used GitHub Git Commands – Reusable Bash Reference
+
+# 🔍 Check current branch
+    git branch
+
+# 🧭 Switch to a branch
+    git checkout <branch-name>
+
+# 🆕 Create and switch to a new branch
+    git checkout -b <new-branch-name>
+
+# 📥 Clone a GitHub repository
+    git clone https://github.com/<user>/<repo>.git
+
+# 🔄 Fetch all remote updates (branches, tags)
+    git fetch --all --tags
+
+# 🔄 Pull latest changes from current branch (merge)
+    git pull
+
+# 🔄 Pull with rebase for cleaner history
+    git pull --rebase
+
+# 📤 Push current branch to GitHub
+    git push origin <branch-name>
+
+# 📤 Push all tags to GitHub
+    git push --tags
+
+# 🔄 Sync fork with upstream (if using a fork)
+    git remote add upstream https://github.com/<original-owner>/<repo>.git
+    git fetch upstream
+    git merge upstream/main
+
+# 📦 Stage all changes
+    git add .
+
+# 📝 Commit staged changes with a message
+    git commit -m "Your commit message"
+
+# 🧹 Undo last commit but keep changes
+    git reset --soft HEAD~1
+
+# 🧹 Discard local changes to tracked files
+    git checkout -- <file>
+
+# 🧼 Remove all untracked files and directories
+    git clean -fd
+
+# 📄 View commit history
+    git log --oneline --graph --decorate --all
+
+# 📊 Show status of working directory
+    git status
+
+# 🧠 View remote URLs
+    git remote -v
+
+# 🔗 Add a new remote
+    git remote add origin https://github.com/<user>/<repo>.git
+
+# 🧪 Test GitHub authentication
+    gh auth status
+
+# 🚀 Create a pull request (requires GitHub CLI)
+    gh pr create --base main --head <branch-name> --title "PR Title" --body "PR Description"
+
+# 📦 List GitHub issues (requires GitHub CLI)
+    gh issue list
+
+# 🧾 View GitHub repo info (requires GitHub CLI)
+    gh repo view --web
+
+markdown
+# 🧰 GitHub Git Commands – Most Used Syntaxes
+## 🔍 Branch Management
+# Show current branch
+git branch
+
+# Switch to a branch
+git checkout <branch-name>
+
+# Create and switch to a new branch
+git checkout -b <new-branch-name>
+
+📥 Cloning and Remote Setup
+# Clone a GitHub repository
+git clone https://github.com/<user>/<repo>.git
+
+# View remote URLs
+git remote -v
+
+# Add a new remote
+git remote add origin https://github.com/<user>/<repo>.git
+
+🔄 Syncing and Updating
+# Fetch all remote updates (branches, tags)
+git fetch --all --tags
+
+# Pull latest changes from current branch (merge)
+git pull
+
+# Pull with rebase for cleaner history
+git pull --rebase
+
+# Push current branch to GitHub
+git push origin <branch-name>
+
+# Push all tags to GitHub
+git push --tags
+
+🔁 Fork Syncing (Upstream)
+# Add upstream remote (for forks)
+git remote add upstream https://github.com/<original-owner>/<repo>.git
+
+# Fetch from upstream
+git fetch upstream
+
+# Merge upstream changes into local branch
+git merge upstream/main
+
+📦 Staging and Committing
+# Stage all changes
+git add .
+
+# Commit staged changes with a message
+git commit -m "Your commit message"
+
+🧹 Undo and Cleanup
+# Undo last commit but keep changes
+git reset --soft HEAD~1
+
+# Discard local changes to tracked files
+git checkout -- <file>
+
+# Remove all untracked files and directories
+git clean -fd
+
+📊 Status and History
+# Show status of working directory
+git status
+
+# View commit history
+git log --oneline --graph --decorate --all
+
+🧪 GitHub CLI (gh)
+# Check GitHub authentication
+gh auth status
+
+# Create a pull request
+gh pr create --base main --head <branch-name> --title "PR Title" --body "PR Description"
+
+# List GitHub issues
+gh issue list
+
+# View GitHub repo info
+gh repo view --web
+
